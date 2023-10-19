@@ -1,11 +1,21 @@
+package br.com.screenmatch.modelos;
+
 public class Filme {
     String nome;
     int anoDeLancamento;
     boolean incluidoNoPlano;
-    double somaDasAvaliacoes;
+    private double somaDasAvaliacoes;
 
-    int totalDeAvaliacoes;
+    private int totalDeAvaliacoes;
     int duracaoEmMinutos;
+
+    public double getSomaDasAvaliacoes() {
+        return somaDasAvaliacoes;
+    }
+
+    public int getTotalDeAvaliacoes() {
+        return totalDeAvaliacoes;
+    }
 
     void exibeFichaTecnica() {
         System.out.println("Nome do filme: "+ nome);
