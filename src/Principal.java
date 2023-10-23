@@ -1,3 +1,4 @@
+import br.com.screenmatch.calculos.CalculadoraDeTempo;
 import br.com.screenmatch.modelos.Filme;
 import br.com.screenmatch.modelos.Serie;
 
@@ -25,5 +26,14 @@ public class Principal {
         lost.exibeFichaTecnica();
         System.out.println("Duracao em minutos para maratonar: " + lost.getDuracaoEmMinutos());
 
+        Filme outroFilme = new Filme();
+        outroFilme.setNome("O poderoso chefao 2");
+        outroFilme.setAnoDeLancamento(1974);
+        outroFilme.setDuracaoEmMinutos(190);
+
+        CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
+        calculadora.inclui(meuFilme);
+        calculadora.inclui(outroFilme);
+        System.out.println(calculadora.getTempoTotal());
     }
 }
