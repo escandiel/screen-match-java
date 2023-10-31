@@ -2,6 +2,8 @@ import br.com.screenmatch.calculos.CalculadoraDeTempo;
 import br.com.screenmatch.modelos.Filme;
 import br.com.screenmatch.modelos.Serie;
 
+import java.util.ArrayList;
+
 public class Principal {
     public static void main(String[] args){
         Filme meuFilme = new Filme();
@@ -35,5 +37,12 @@ public class Principal {
         calculadora.inclui(meuFilme);
         calculadora.inclui(outroFilme);
         System.out.println(calculadora.getTempoTotal());
+
+        var filmeDoEscandi = new Filme();
+        filmeDoEscandi.setDuracaoEmMinutos(200);
+        filmeDoEscandi.setNome("Marvel Iron Man 3");
+        filmeDoEscandi.setAnoDeLancamento(2012);
+        filmeDoEscandi.avalia(10);
+        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
     }
 }
